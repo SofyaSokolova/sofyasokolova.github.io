@@ -562,9 +562,18 @@ header {
   margin: 100px 0 70px 0;
 }
 
-.main__portfolio img {
+.main__portfolio > img {
   display: flex;
   width: 370px;
+  height: 530px;
+  background-color: #ffffff;
+}
+
+.main__portfolio--top > img,
+.main__portfolio--bottom > img {
+  display: flex;
+  width: 370px;
+  height: 250px;
   background-color: #ffffff;
 }
 
