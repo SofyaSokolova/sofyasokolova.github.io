@@ -1,0 +1,6 @@
+#files and dirs ignored
+
+/psd
+/work
+#index.html
+/css/#main.css
