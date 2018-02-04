@@ -16,8 +16,14 @@
           </object>
         </div>
         <nav class="header__main-nav">
-          <div class="header__menu-logo">
-            <!-- Бургер -->
+          <div>
+            <a class="header__menu-logo" href="#soon">
+              <svg>
+                <rect width="20" height="2" class="line-1"/>
+                <rect width="20" height="2" class="line-2" y="7px"/>
+                <rect width="20" height="2" class="line-3" y="14px"/>
+              </svg>
+            </a>
           </div>
           <ul hidden>
             <li></li>
@@ -29,42 +35,49 @@
     </header>
     <main class="main flex--col">
       <div class="main__content flex--row">
-        <div class="main-container">
-          <div class="main__categories-btn">
-            <!-- Кнопка 4 квадрата -->
+        <div class="main-container flex--col">
+          <div>
+            <a class="main__categories-btn" href="#soon">
+              <svg>
+                <rect width="6" height="6" class="cube-1"/>
+                <rect width="6" height="6" class="cube-2" y="10px"/>
+                <rect width="6" height="6" class="cube-3" x="10px"/>
+                <rect width="6" height="6" class="cube-3" x="10px" y="10px"/>
+              </svg>
+            </a>
           </div>
           <section class="main__portfolio flex--row">
             <div class="portfolio__item flex--col">
-              <div class="portfolio__item--top">
+              <div class="portfolio__item--top flex">
                 <img width="370" height="250" src="img/picture-1.jpg" alt="Альбом Coldplay">
               </div>
-              <div class="portfolio__item--bottom">
+              <div class="portfolio__item--bottom flex">
                 <img width="370" height="250" src="img/picture-2.jpg" alt="">
               </div>
             </div>
-            <div class="portfolio__item flex--col">
+            <div class="portfolio__item flex">
               <img width="370" height="530" src="img/picture-3.jpg" alt="Фестиваль иностранных языков &#8222Часть речи&#8220">
             </div>
             <div class="portfolio__item flex--col">
-              <div class="portfolio__item--top">
+              <div class="portfolio__item--top flex">
                 <img width="370" height="250" src="img/picture-7.jpg" alt="30 минут в подарок. Циферблат">
               </div>
-              <div class="portfolio__item--bottom">
+              <div class="portfolio__item--bottom flex">
                 <img width="370" height="250" src="img/picture-9.jpg" alt="Kotloff. Котельные системы">
               </div>
             </div>
-            <div class="portfolio__item flex--col">
+            <div class="portfolio__item flex">
               <img width="370" height="530" src="img/picture-4.jpg" alt="Be lingva">
             </div>
             <div class="portfolio__item flex--col">
-              <div class="portfolio__item--top">
+              <div class="portfolio__item--top flex">
                 <img width="370" height="250" src="img/picture-5.jpg" alt="Summer Camp Be Lingva 2016">
               </div>
-              <div class="portfolio__item--bottom">
+              <div class="portfolio__item--bottom flex">
                 <img width="370" height="250" src="img/picture-6.jpg" alt="Greek To Me? Summer Camp 2016">
               </div>
             </div>            
-            <div class="portfolio__item flex--col">
+            <div class="portfolio__item flex">
               <img width="370" height="530" src="img/picture-8.jpg" alt="Метель. Драма в двух частях">
             </div>
           </section>
@@ -101,5 +114,11 @@
         </div>
       </div>
     </footer>
+    <div class="soon-alert" id="soon">
+      <div class="soon-block">
+        <p>Эта кнопка скоро заработает. Спасибо!</p>
+        <a class="close" href="#">OK</a>
+      </div>
+    </div>
   </body>
   </html>
