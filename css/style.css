@@ -12,6 +12,50 @@ body {
   background-size: auto; */
 }
 
+@font-face {
+  font-family: 'Gravity';
+  src: 
+    local('Gravity'),
+    url('../fonts/gravity-400-normal.woff2') format('woff2'),
+    url('../fonts/gravity-400-normal.woff') format('woff'),
+    url('../fonts/gravity-400-normal.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gravity';
+  src: 
+    local('Gravity'),
+    url('../fonts/gravity-700-normal.woff2') format('woff2'),
+    url('../fonts/gravity-700-normal.woff') format('woff'),
+    url('../fonts/gravity-700-normal.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gravity';
+  src: 
+    local('Gravity'),
+    url('../fonts/gravity-400-italic.woff2') format('woff2'),
+    url('../fonts/gravity-400-italic.woff') format('woff'),
+    url('../fonts/gravity-400-italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gravity';
+  src: 
+    local('Gravity'),
+    url('../fonts/gravity-700-italic.woff2') format('woff2'),
+    url('../fonts/gravity-700-italic.woff') format('woff'),
+    url('../fonts/gravity-700-italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
 div[class*="container"] {
   flex-basis: 1170px;
   padding: 0 15px;
@@ -50,14 +94,15 @@ header {
   margin: 30px 0;
 }
 
-.header__main-nav {
-
+.header__main-nav div {
+  margin: 0;
+  padding: 0;
 }
 
 .header__menu-logo {
   display: block;
-  padding: 5px;
-  margin-right: -5px;
+  padding: 10px;
+  margin-right: -10px;
 }
 
 .header__menu-logo svg {
@@ -86,8 +131,8 @@ header {
 
 .main__categories-btn {
   display: block;
-  padding: 5px;
-  margin: 42px 0;
+  padding: 10px;
+  margin: 32px 0 27px 0;
 }
 
 .main__categories-btn svg {
@@ -142,6 +187,7 @@ header {
 .main__loader-btn a:visited,
 .main__loader-btn a:active {
   flex-basis: 1170px;
+  font-family: 'Gravity', 'Arial', sans-serif;
   text-decoration: none;
   color: #1d1d1d;
   font-size: 14px;
@@ -161,17 +207,25 @@ header {
 }
 
 .footer__content {
-  padding: 45px 0;
+  padding: 55px 0 45px 0;
+  align-items: center;
 }
 
 .footer__social {
   justify-content: space-around;
-  margin-bottom: 20px;
+  width: 150px;
+  margin-bottom: 17px;
+}
+
+.footer__social a {
+  font-size: 0;
 }
 
 .footer__copyright {
+  font-family: 'Gravity', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 28px;
+  color: #5f5f5f;
 }
 
 .social-btn {
