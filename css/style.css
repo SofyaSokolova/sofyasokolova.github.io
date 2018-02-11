@@ -15,7 +15,7 @@ body {
 @font-face {
   font-family: 'Gravity';
   src: 
-    local('Gravity'),
+    local('Gravity 400 normal'),
     url('../fonts/gravity-400-normal.woff2') format('woff2'),
     url('../fonts/gravity-400-normal.woff') format('woff'),
     url('../fonts/gravity-400-normal.ttf') format('truetype');
@@ -24,20 +24,20 @@ body {
 }
 
 @font-face {
-  font-family: 'Gravity';
+  font-family: 'Gravity__bold';
   src: 
-    local('Gravity'),
+    local('Gravity 700 normal'),
     url('../fonts/gravity-700-normal.woff2') format('woff2'),
     url('../fonts/gravity-700-normal.woff') format('woff'),
     url('../fonts/gravity-700-normal.ttf') format('truetype');
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gravity';
+  font-family: 'Gravity__italic';
   src: 
-    local('Gravity'),
+    local('Gravity 400 italic'),
     url('../fonts/gravity-400-italic.woff2') format('woff2'),
     url('../fonts/gravity-400-italic.woff') format('woff'),
     url('../fonts/gravity-400-italic.ttf') format('truetype');
@@ -46,19 +46,14 @@ body {
 }
 
 @font-face {
-  font-family: 'Gravity';
+  font-family: 'Gravity__italic__bold';
   src: 
-    local('Gravity'),
+    local('Gravity 700 italic'),
     url('../fonts/gravity-700-italic.woff2') format('woff2'),
     url('../fonts/gravity-700-italic.woff') format('woff'),
     url('../fonts/gravity-700-italic.ttf') format('truetype');
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
-}
-
-div[class*="container"] {
-  flex-basis: 1170px;
-  padding: 0 15px;
 }
 
 .flex {
@@ -79,10 +74,28 @@ div[class*="container"] {
   flex-wrap: wrap;
 }
 
+div[class*="container"] {
+  flex-basis: 1170px;
+  padding: 0 15px;
+}
+
+.social-btn {
+  font-size: 0;
+  padding: 11px 6px;
+}
+
+.social-btn-block {
+  justify-content: space-around;
+  width: 150px;
+}
+
+
+
 /* HEADER */
 
 header {
   background-color: #ffffff;
+  position: relative;
 }
 
 .header-container {
@@ -94,10 +107,10 @@ header {
   margin: 30px 0;
 }
 
-.header__main-nav div {
+/* .header__main-nav div {
   margin: 0;
   padding: 0;
-}
+} */
 
 .header__menu-logo {
   display: block;
@@ -117,6 +130,58 @@ header {
   height: 2px;
   fill: #191919;
 }
+
+.header__main-nav ul {
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 13px;
+}
+
+.header__menu-block {
+  display: none;
+}
+
+.header__menu-block:target {
+  position: absolute;
+  display: flex;
+  top: 100px;
+  right: 0;
+  padding-top: 50px;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header__menu {
+  align-items: center;
+}
+
+.header__menu li {
+  width: 100%;
+}
+
+.header__menu a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'Gravity__bold', 'Arial', sans-serif;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 48px;
+  color: #191919;
+}
+
+.header__menu a:hover {
+  background-color: #f6f6f6;
+}
+
+.header__menu__social {
+  padding: 54px 0;
+}
+
 
 /* MAIN */
 
@@ -169,8 +234,27 @@ header {
 }
 
 .portfolio__item {
+  position: relative;
   justify-content: space-between;
   margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.portfolio__item:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #0c0c0c;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.portfolio__item:hover.portfolio__item:after {
+  opacity: 0.85;
 }
 
 .main__loader {
@@ -180,6 +264,7 @@ header {
 .main__loader-btn {
   flex-basis: 1170px;
   padding: 0 15px;
+  align-content: center;
 }
 
 .main__loader-btn a,
@@ -187,8 +272,10 @@ header {
 .main__loader-btn a:visited,
 .main__loader-btn a:active {
   flex-basis: 1170px;
+  display: block;
   font-family: 'Gravity', 'Arial', sans-serif;
   text-decoration: none;
+  text-align: center;
   color: #1d1d1d;
   font-size: 14px;
   line-height: 28px;
@@ -207,25 +294,25 @@ header {
 }
 
 .footer__content {
-  padding: 55px 0 45px 0;
+  padding: 45px 0 45px 0;
   align-items: center;
 }
 
-.footer__social {
-  justify-content: space-around;
-  width: 150px;
-  margin-bottom: 17px;
+.footer__social a {
+  opacity: 0.4;
 }
 
-.footer__social a {
-  font-size: 0;
+.footer__social a:hover {
+  opacity: 1;
+  background: #d7d7d7;
 }
 
 .footer__copyright {
+  margin-top: 5px;
   font-family: 'Gravity', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 28px;
-  color: #5f5f5f;
+  color: #5f5f5f; 
 }
 
 .social-btn {
