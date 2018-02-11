@@ -170,7 +170,7 @@ header {
   color: #191919;
 }
 
-.header__menu a:hover {
+.header__menu-block a:hover {
   background-color: #f6f6f6;
 }
 
